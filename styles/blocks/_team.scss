@@ -1,0 +1,78 @@
+.team {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 200px;
+	padding-block: 30px;
+	background-color: var(--color-darkGreen);
+
+	@include desktop {
+		column-gap: 50px;
+		padding-block: 25px;
+	}
+
+	@include tablet {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 20px;
+	}
+
+	&__image {
+		&-main {
+			border-radius: 50%;
+			height: auto;
+		}
+
+		@include mobile {
+			max-width: 50%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 40px;
+		max-width: 646px;
+
+		@include desktop {
+			row-gap: 20px;
+		}
+
+		@include tablet {
+			align-items: center;
+			text-align: center;
+		}
+
+
+		&-title {
+			font-weight: 700;
+			font-size: 50px;
+			text-transform: uppercase;
+			color: var(--color-light);
+
+			@include desktop {
+				font-size: 32px;
+			}
+
+			@include mobile {
+				font-size: 18px;
+			}
+		}
+
+		&-text {
+			font-weight: 500;
+			font-size: 24px;
+			text-transform: lowercase;
+			color: #bcb9b9;
+
+			@include desktop {
+				font-size: 20px;
+			}
+
+			@include mobile {
+				font-size: 18px;
+			}
+		}
+	}
+}

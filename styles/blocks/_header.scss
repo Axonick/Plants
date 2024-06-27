@@ -1,0 +1,102 @@
+.header {
+	padding-block: 20px;
+	background-color: var(--color-darkGreen);
+
+	// @include desktop {
+	// 	padding-top: 10px;
+	// }
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 50px;
+
+		@include desktop {
+			column-gap: 15px;
+		}
+
+		@include mobile {
+			column-gap: 10px;
+		}
+	}
+
+	&__menu {
+		font-size: 22px;
+
+		&-list {
+			display: flex;
+			align-items: center;
+			column-gap: 64px;
+
+			@include desktop {
+				column-gap: 30px;
+			}
+
+			@include mobile {
+				font-size: 16px;
+				column-gap: 10px;
+			}
+		}
+
+		&-link {
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			height: 48px;
+			color: var(--color-light);
+
+			@include tablet {
+				font-size: 18px;
+			}
+
+			@include mobile {
+				font-size: 14px;
+			}
+
+			@include hover {
+				&::after {
+					width: 100%;
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				translate: -50%;
+				width: 0;
+				height: 2px;
+				background-color: var(--color-green);
+				transition-duration: inherit;
+			}
+		}
+	}
+
+	&__logo {
+		position: relative;
+		max-width: 137px;
+		flex-shrink: 0;
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__button-actions {
+		display: flex;
+		align-items: center;
+		column-gap: 30px;
+		flex-shrink: 0;
+
+		@include desktop {
+			column-gap: 15px;
+		}
+
+		@include mobile {
+			max-width: 15%;
+			column-gap: 6px;
+		}
+	}
+}

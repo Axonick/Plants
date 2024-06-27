@@ -1,0 +1,23 @@
+:root {
+	// colors
+	--color-darkGreen: #165166;
+	--color-green: #54c352;
+	--color-green-light: #05ff00;
+	--color-olive: #78a677;
+	--color-dark: #000000;
+	--color-light: #ffffff;
+	--color-gray: #cccccc;
+
+	--border: 1px solid var(--color-green);
+	--border-radius-small: 5px;
+	--border-radius-large: 40px;
+
+	--font-family-base: 'Poppins', sans-serif;
+
+	--container-width: 1625px;
+	--container-padding-x: 20px;
+
+	--button-height: 80px;
+
+	--transition-duration: 0.2s;
+}

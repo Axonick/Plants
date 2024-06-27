@@ -1,0 +1,20 @@
+.button {
+	@include reset-button;
+	@include flex-center(true);
+
+	height: var(--button-height);
+	border-radius: var(--border-radius-small);
+	width: 206px;
+	border: none;
+
+	&--green {
+		font-size: 20px;
+		background-color: var(--color-green-light);
+		color: var(--color-light);
+
+		@include hover {
+			background-color: var(--color-green);
+			transition-duration: var(--transition-duration);
+		}
+	}
+}

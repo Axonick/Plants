@@ -1,0 +1,60 @@
+.collections {
+	background-color: var(--color-darkGreen);
+	padding-block: 50px;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 50px;
+
+		@include tablet {
+			column-gap: 30px;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			row-gap: 25px;
+		}
+
+		&-info {
+			max-width: 807px;
+			text-align: center;
+
+			@include mobile {
+				order: 1;
+			}
+
+			&-title {
+				font-size: 82px;
+				font-weight: 600;
+				color: var(--color-light);
+				padding-bottom: 37px;
+
+				@include desktop-above {
+					font-size: 70px;
+				}
+
+				@include desktop {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+
+	&__images {
+		position: relative;
+		object-fit: cover;
+	}
+
+	&__image {
+		border-radius: 50%;
+		object-fit: cover;
+
+		&-circle {
+			position: absolute;
+			top: 53px;
+			left: -30px;
+		}
+	}
+}

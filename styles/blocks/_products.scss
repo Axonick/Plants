@@ -1,0 +1,129 @@
+.products {
+	// max-width: 1533px;
+	padding-block: 20px;
+	// padding-bottom: 145px;
+
+	&__header {
+		max-width: 838px;
+		text-align: center;
+		margin: 0 auto;
+		padding-bottom: 80px;
+
+		@include tablet {
+			padding-bottom: 40px;
+		}
+
+		@include mobile {
+			padding-bottom: 20px;
+		}
+
+		&-title {
+			font-size: 52px;
+			font-weight: 700;
+			color: var(--color-dark);
+			padding-bottom: 19px;
+
+			@include tablet {
+				font-size: 40px;
+			}
+		}
+
+		&-text {
+			font-size: 24px;
+			line-height: 1.5;
+			text-transform: lowercase;
+			color: #333;
+
+			@include tablet {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__footer {
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 40px;
+
+			@include desktop {
+				column-gap: 30px;
+			}
+
+			@include tablet {
+				grid-template-columns: repeat(1, 1fr);
+				row-gap: 20px;
+			}
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: 10px;
+			background-color: var(--color-darkGreen);
+			border-radius: 10px;
+			padding-top: 10px;
+
+			@include desktop {
+				row-gap: 5px;
+			}
+		}
+
+		&-image {
+			border-radius: 50px;
+			// object-fit: cover;
+		}
+
+		&-title {
+			font-weight: 700;
+			font-size: 24px;
+			text-transform: uppercase;
+			color: var(--color-light);
+
+			@include desktop {
+				font-size: 20px;
+			}
+		}
+
+		&-info {
+			font-weight: 400;
+			font-size: 20px;
+			text-align: center;
+			color: #cdcdcd;
+
+			@include desktop {
+				font-size: 16px;
+			}
+		}
+
+		&-button {
+			display: flex;
+			align-items: center;
+			height: 50px;
+			background-color: var(--color-light);
+			border-radius: 25px;
+			max-width: 231px;
+			margin-bottom: 20px;
+
+			@include tablet {
+				margin-bottom: 10px;
+			}
+
+			&-price {
+				color: red;
+				padding-inline: 7px;
+			}
+
+			&-add {
+				font-size: 20px;
+				height: 50px;
+				border: none;
+				border-radius: 25px;
+				color: var(--color-light);
+				padding-inline: 35px;
+				flex-shrink: 0;
+			}
+		}
+	}
+}

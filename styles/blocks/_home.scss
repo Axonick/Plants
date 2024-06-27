@@ -1,0 +1,163 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	row-gap: 18px;
+	padding-bottom: 50px;
+
+	@include mobile {
+		padding-bottom: 30px;
+	}
+
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 40px;
+	}
+
+	&__body {
+		max-width: 709px;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+
+		@include tablet {
+			margin-inline: auto;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		border-radius: 50%;
+		object-fit: cover;
+
+		@include desktop {
+			max-width: 40%;
+		}
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__title {
+		font-size: 62px;
+		color: var(--color-light);
+		padding-bottom: 30px;
+
+		@include desktop {
+			font-size: 52px;
+		}
+
+		@include tablet {
+			font-size: 42px;
+		}
+
+		&-span {
+			color: var(--color-green-light);
+		}
+	}
+
+	&__description {
+		font-size: 24px;
+		color: var(--color-light);
+		padding-bottom: 43px;
+
+		p {
+			font-size: 20px;
+		}
+	}
+
+	&__button-actions {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 83px;
+		margin-bottom: 70px;
+
+		@include desktop {
+			column-gap: 40px;
+			padding-bottom: 40px;
+		}
+
+		@include mobile {
+			column-gap: 20px;
+			padding-bottom: 20px;
+		}
+	}
+
+	&__button-link {
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+		font-size: 22px;
+		color: var(--color-light);
+
+		&:hover {
+			opacity: 0.7;
+			transition-duration: var(--transition-duration);
+		}
+	}
+
+	&__statistics-list {
+		display: flex;
+		align-items: center;
+		column-gap: 50px;
+		height: 89px;
+		color: var(--color-light);
+		font-size: 22px;
+		padding-bottom: 70px;
+
+		.item-span {
+			font-size: 52px;
+			color: var(--color-green-light);
+
+			@include mobile {
+				font-size: 25px;
+				padding-bottom: 50px;
+			}
+		}
+	}
+
+	&__statistics-item {
+		@include mobile {
+			text-align: center;
+			font-size: 15px;
+		}
+	}
+
+	&__partners-title {
+		font-weight: 600;
+		font-size: 32px;
+		color: var(--color-light);
+		padding-bottom: 62px;
+
+		@include desktop {
+			font-size: 28px;
+		}
+
+		@include tablet {
+			text-align: center;
+		}
+
+		@include mobile {
+			font-size: 24px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__partners-list {
+		display: flex;
+		align-items: center;
+		column-gap: 50px;
+
+		@include tablet {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: center;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
